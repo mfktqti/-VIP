@@ -1,0 +1,20 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Action时间 @ViewBag.ActionNow</h1>
+    <h1>Page时间 @DateTime.Now</h1>
+    @{ 
+        throw new Exception("Page Error");
+    }
+</body>
+</html>

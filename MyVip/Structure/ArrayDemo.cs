@@ -36,7 +36,7 @@ namespace Structure
                 int[][] a = new int[2][];
                 a[0] = new int[] { 123,3,4};
                 a[1] = new int[] { 123, 3, 4 ,4,5,};
-                ArrayList list = new `();
+                //ArrayList list = new `();
             }
 
         }

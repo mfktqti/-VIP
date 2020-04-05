@@ -5,7 +5,28 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StructureAlgorithm", "StructureAlgorithm", "{3EFA1788-E8F1-4C8A-82F7-DFBA43683266}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Structure", "Structure\Structure.csproj", "{90D4B41D-FC4F-445A-941A-0B2A44822D72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Structure", "Structure\Structure.csproj", "{90D4B41D-FC4F-445A-941A-0B2A44822D72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Expression", "Expression", "{21EC4A6B-F346-41A3-A194-A10153B9ECFB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionTest", "ExpressionTest\ExpressionTest.csproj", "{526C6052-8E3E-479F-8BCE-DE2B826AEF2D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JWT", "JWT", "{80DF199F-06E2-49E2-BEA6-9A533F0AEC99}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jason.AuthenticationCenter", "Jason.AuthenticationCenter\Jason.AuthenticationCenter.csproj", "{78E11837-5C1C-43AF-850C-467426014BD0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jason.JwtWebApiDemo", "Jason.JwtWebApiDemo\Jason.JwtWebApiDemo.csproj", "{C36F4493-AC4B-449E-A1B2-93585F3BABA0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "设计模式", "设计模式", "{60933D72-3760-496F-8C43-942863EAF6C9}"
+	ProjectSection(SolutionItems) = preProject
+		readme.txt = readme.txt
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flyweight", "Flyweight\Flyweight.csproj", "{688BF11A-B5FD-42CE-B691-C0A2BB9B284C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCore", "NetCore", "{CD81D915-8164-4504-8864-4D5AA2505089}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore31.Demo1", "AspNetCore31.Demo1\AspNetCore31.Demo1.csproj", "{DF1214EB-393E-4A2C-A592-14D7C6387D34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +38,37 @@ Global
 		{90D4B41D-FC4F-445A-941A-0B2A44822D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90D4B41D-FC4F-445A-941A-0B2A44822D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90D4B41D-FC4F-445A-941A-0B2A44822D72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{526C6052-8E3E-479F-8BCE-DE2B826AEF2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{526C6052-8E3E-479F-8BCE-DE2B826AEF2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{526C6052-8E3E-479F-8BCE-DE2B826AEF2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{526C6052-8E3E-479F-8BCE-DE2B826AEF2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78E11837-5C1C-43AF-850C-467426014BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E11837-5C1C-43AF-850C-467426014BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E11837-5C1C-43AF-850C-467426014BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E11837-5C1C-43AF-850C-467426014BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C36F4493-AC4B-449E-A1B2-93585F3BABA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36F4493-AC4B-449E-A1B2-93585F3BABA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C36F4493-AC4B-449E-A1B2-93585F3BABA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C36F4493-AC4B-449E-A1B2-93585F3BABA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{688BF11A-B5FD-42CE-B691-C0A2BB9B284C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{688BF11A-B5FD-42CE-B691-C0A2BB9B284C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{688BF11A-B5FD-42CE-B691-C0A2BB9B284C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{688BF11A-B5FD-42CE-B691-C0A2BB9B284C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF1214EB-393E-4A2C-A592-14D7C6387D34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF1214EB-393E-4A2C-A592-14D7C6387D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF1214EB-393E-4A2C-A592-14D7C6387D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF1214EB-393E-4A2C-A592-14D7C6387D34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{90D4B41D-FC4F-445A-941A-0B2A44822D72} = {3EFA1788-E8F1-4C8A-82F7-DFBA43683266}
+		{526C6052-8E3E-479F-8BCE-DE2B826AEF2D} = {21EC4A6B-F346-41A3-A194-A10153B9ECFB}
+		{78E11837-5C1C-43AF-850C-467426014BD0} = {80DF199F-06E2-49E2-BEA6-9A533F0AEC99}
+		{C36F4493-AC4B-449E-A1B2-93585F3BABA0} = {80DF199F-06E2-49E2-BEA6-9A533F0AEC99}
+		{688BF11A-B5FD-42CE-B691-C0A2BB9B284C} = {60933D72-3760-496F-8C43-942863EAF6C9}
+		{DF1214EB-393E-4A2C-A592-14D7C6387D34} = {CD81D915-8164-4504-8864-4D5AA2505089}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {48A2D3D9-96C6-44F1-8563-B394833DEAB6}
