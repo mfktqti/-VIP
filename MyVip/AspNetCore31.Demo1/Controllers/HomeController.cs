@@ -9,9 +9,12 @@ using AspNetCore31.Demo1.Models;
 using Microsoft.Extensions.Configuration;
 using AspNetCore31.Demo1.Utility;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AspNetCore31.Demo1.Controllers
 {
+    //[TypeFilter(typeof(CheckLoginActionFilterAttribute))]
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -72,12 +75,12 @@ namespace AspNetCore31.Demo1.Controllers
 
 
 
-        [CustomerIOCFilterFactory(typeof(CustomExceptionFilterAttribute))]
+      //  [CustomerIOCFilterFactory(typeof(CustomExceptionFilterAttribute))]
         public IActionResult Index()
         {
             var logging_LogLevel_Default = configuration["Logging:LogLevel:Default"];
 
-            logging_LogLevel_Default = configuration["Logging:LogLevel:Default1"].ToString();
+           // logging_LogLevel_Default = configuration["Logging:LogLevel:Default1"].ToString();
 
             this.ViewBag.LogLevelDefault = logging_LogLevel_Default;
 

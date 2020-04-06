@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AspNetCore31.Demo1.Utility;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,10 +28,19 @@ namespace AspNetCore31.Demo1
             services.AddControllersWithViews( options=> {
                 options.Filters.Add<CustomExceptionFilterAttribute>();
                 options.Filters.Add<CustomGlobalFilterAttribute>(5);
-            });
+            }).AddRazorRuntimeCompilation();//修改cshtml后能自动编译
 
-       //   services.AddScoped(typeof(CustomExceptionFilterAttribute));
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(
+                options => {
+                    options.LoginPath = new PathString("/Login/login");
+                    options.AccessDeniedPath = new PathString("/Home/Privacy");
+                });//用Cookie的方式验证，顺便初始化登录地址
+
+            //   services.AddScoped(typeof(CustomExceptionFilterAttribute));
             // services.AddScoped(typeof(CustomerIOCFilterFactoryAttribute));
+
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,10 +55,12 @@ namespace AspNetCore31.Demo1
                 app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseAuthentication();//鉴权，检测有没有登录，登录的是谁，赋值给User
+
+            app.UseAuthorization();//授权
 
             app.UseEndpoints(endpoints =>
             {

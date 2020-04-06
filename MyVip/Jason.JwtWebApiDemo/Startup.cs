@@ -59,7 +59,7 @@ namespace Jason.JwtWebApiDemo
             app.UseRouting();
 
             app.UseAuthorization();
-            app.UseMiddleware<JwtCustomerAuthorizeMiddleware>(Configuration["SecurityKey"]);
+         //   app.UseMiddleware<JwtCustomerAuthorizeMiddleware>(Configuration["SecurityKey"]);
 
             app.UseEndpoints(endpoints =>
             {
